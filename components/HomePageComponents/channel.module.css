@@ -1,0 +1,66 @@
+.namecontainer{
+    height: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.namecontainer::-webkit-scrollbar{
+    width: 5px;
+    background-color: rgb(29, 65, 98);
+    border-radius: 10px;
+}
+.namecontainer::-webkit-scrollbar-track{
+    width: 5px;
+}
+.namecontainer::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: #2a3651;
+}
+.individualnamecontainer{
+    background-color: #252f47;
+    padding: .5rem;
+    width: 11rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+}
+.individualnamecontainer:hover{
+    background-color: #2a3651;
+    box-shadow: 1px 1px 3px 3px #2a3651;
+}
+.chakra-stack {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.chakra-skeleton{
+    background-color: #2a3651;
+}
+
+/* colorstv  */
+
+.colorcontainer > h2{
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem auto;
+}
+/* starplustv  */
+
+.starcontainer > h2{
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem auto;
+}
+/* zeetv  */
+
+.zeecontainer > h2{
+    font-size: 1.5rem;
+    color: white;
+    margin: 1rem auto;
+}
