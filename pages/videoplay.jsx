@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "./api/api";
 import { Dna } from "react-loader-spinner";
 import styles from "./home.module.css";
@@ -6,8 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function videoplay() {
-  const [source, setsource] = React.useState("");
-  const [loading, setloading] = React.useState(true);
+  const [source, setsource] = useState("");
+  const [loading, setloading] = useState(true);
 
   const getFinalLink = async () => {
     setloading(true);
@@ -29,7 +29,7 @@ export default function videoplay() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     getFinalLink();
   }, []);
 
