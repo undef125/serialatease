@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Colors from "../components/HomePageComponents/Colors";
 import StarPlus from "../components/HomePageComponents/StarPlus";
 import ZeeTV from "../components/HomePageComponents/ZeeTV";
 import styles from "./home.module.css";
 
 export default function HomePage() {
-  const [colorsclick, setcolorclick] = React.useState(false);
-  const [starplusclick, setstarplusclick] = React.useState(false);
-  const [zeetvclick, setzeetvclick] = React.useState(false);
+  const [colorsclick, setcolorclick] = useState(false);
+  const [starplusclick, setstarplusclick] = useState(false);
+  const [zeetvclick, setzeetvclick] = useState(false);
 
   const sequencer = () => {
     setTimeout(() => setcolorclick(true), 0);
@@ -18,7 +18,7 @@ export default function HomePage() {
 
   sequencer();
 
-  React.useEffect(() => {}, [colorsclick, starplusclick, zeetvclick]);
+  useEffect(() => {}, [colorsclick, starplusclick, zeetvclick]);
 
   return (
     <>

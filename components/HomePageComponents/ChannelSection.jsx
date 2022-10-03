@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import axios from "../../pages/api/api";
 import styles from "./channel.module.css";
 import Router from 'next/router'
@@ -6,8 +6,8 @@ import Router from 'next/router'
 import { Stack, Skeleton } from "@chakra-ui/react";
 
 export default function ChannelSection({ channelName }) {
-  const [serialNames, setSerialNames] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [serialNames, setSerialNames] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getSerialNames = async () => {
     setLoading(true);
@@ -19,7 +19,7 @@ export default function ChannelSection({ channelName }) {
       console.log(`error: ${error}`);
     }
   };
-  React.useEffect(() => {
+  useEffect(() => {
     getSerialNames();
   }, []);
 
