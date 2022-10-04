@@ -12,7 +12,6 @@ export default function ChannelSection({ channelName,setisCookieAvailable }) {
   const [loading, setLoading] = useState(true);
 
   const getSerialNames = async () => {
-    setisCookieAvailable(true);
     setLoading(true);
     try {
       let data = await axios.get(`/getnames/${channelName}`);
@@ -24,7 +23,7 @@ export default function ChannelSection({ channelName,setisCookieAvailable }) {
     }
   };
   useEffect(() => {
-    if(cookieCutter.get('Colors')){
+    if(cookieCutter.get('Colors') && cookieCutter.get('StarPlus') && cookieCutter.get('Zee-TV')){
       setisCookieAvailable(true);
       setSerialNames(cookieCutter.get(`${channelName}`).split(",")); 
       setLoading(false);
