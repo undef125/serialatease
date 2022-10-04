@@ -64,3 +64,18 @@
     color: white;
     margin: 1rem auto;
 }
+
+
+@media screen and (max-width: 600px) {
+    .individualnamecontainer{
+        padding: .4rem;
+        width: 9rem;
+        border-radius: 10px;
+        cursor: pointer;
+        color: silver;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5.5rem;
+    }
+}
