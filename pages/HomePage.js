@@ -27,6 +27,7 @@ export default function HomePage() {
       <div className={styles.wholecontainer}>
       <Head>
         <title>Serial At Ease</title>
+        <meta name="Kapil Kunwar" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
         {colorsclick ? (
