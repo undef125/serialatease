@@ -16,7 +16,7 @@ export default function ChannelSection({ channelName,setisCookieAvailable }) {
     try {
       let data = await axios.get(`/getnames/${channelName}`);
       setSerialNames(data.data);
-      cookieCutter.set(`${channelName}`, data.data);
+      cookieCutter.set(`${channelName}`, data.data, {expires: new Date().getTime() + 1000*60*60*24});
       setLoading(false);
     } catch (error) {
       console.log(`error: ${error}`);

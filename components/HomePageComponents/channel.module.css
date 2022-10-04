@@ -67,6 +67,9 @@
 
 
 @media screen and (max-width: 600px) {
+    .namecontainer{
+        height: 19rem;
+    }
     .individualnamecontainer{
         padding: .4rem;
         width: 9rem;
