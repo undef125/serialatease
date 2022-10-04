@@ -2,25 +2,35 @@ import React, {useState, useEffect} from "react";
 import axios from "../../pages/api/api";
 import styles from "./channel.module.css";
 import Router from 'next/router'
+import cookieCutter from 'cookie-cutter';
 //from chakra ui
 import { Stack, Skeleton } from "@chakra-ui/react";
 
-export default function ChannelSection({ channelName }) {
+export default function ChannelSection({ channelName,setisCookieAvailable }) {
+
   const [serialNames, setSerialNames] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getSerialNames = async () => {
+    setisCookieAvailable(true);
     setLoading(true);
     try {
       let data = await axios.get(`/getnames/${channelName}`);
       setSerialNames(data.data);
+      cookieCutter.set(`${channelName}`, data.data);
       setLoading(false);
     } catch (error) {
       console.log(`error: ${error}`);
     }
   };
   useEffect(() => {
-    getSerialNames();
+    if(cookieCutter.get('Colors')){
+      setisCookieAvailable(true);
+      setSerialNames(cookieCutter.get(`${channelName}`).split(",")); 
+      setLoading(false);
+    } else {
+      getSerialNames();
+    }
   }, []);
 
   return (
@@ -106,18 +116,26 @@ export default function ChannelSection({ channelName }) {
           />
         </Stack>
       ) : (
-        serialNames?.map((name) => (
-          <div className={styles.individualnamecontainer} key={Math.random()} onClick={async() => {
-            
-            localStorage.setItem('channelName', `${channelName}`)
-            localStorage.setItem('serialName', `${name}`)
-            Router.push('/videoplay')
-
-          }}>
-            {name}
-          </div>
-        ))
-      )}
+        // fast 
+        // ? (
+        //   console.log('gg')
+        // ) 
+        // : (
+          serialNames?.map((name) => (
+            <div className={styles.individualnamecontainer} key={Math.random()} onClick={async() => {
+              
+              localStorage.setItem('channelName', `${channelName}`)
+              localStorage.setItem('serialName', `${name}`)
+              Router.push('/videoplay')
+  
+            }}>
+              {name}
+            </div>
+          ))
+        )
+        
+      // )
+      }
     </div>
   );
 }

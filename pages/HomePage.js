@@ -8,24 +8,25 @@ export default function HomePage() {
   const [colorsclick, setcolorclick] = useState(false);
   const [starplusclick, setstarplusclick] = useState(false);
   const [zeetvclick, setzeetvclick] = useState(false);
+  const [isCookieAvailable, setisCookieAvailable] = useState(false);
 
-  const sequencer = () => {
-    setTimeout(() => setcolorclick(true), 0);
-    setTimeout(() => setstarplusclick(true), 4000);
-    setTimeout(() => setzeetvclick(true), 8000);
+  const sequencer = (timea, timeb, timec) => {
+    setTimeout(() => setcolorclick(true), timea);
+    setTimeout(() => setstarplusclick(true), timeb);
+    setTimeout(() => setzeetvclick(true), timec);
 
   };
-
-  sequencer();
+//if name of serial are available in cookie no need to do api call
+  isCookieAvailable ? sequencer(0,0,0) : sequencer(0, 4000, 8000);
 
   useEffect(() => {}, [colorsclick, starplusclick, zeetvclick]);
 
   return (
     <>
     <div className={styles.wholecontainer}>
-      {colorsclick ? <Colors channelName={"Colors"} /> : null}
-      {starplusclick ? <StarPlus channelName={"StarPlus"} /> : null}
-      {zeetvclick ? <ZeeTV channelName={"Zee-TV"} /> : null}
+      {colorsclick ? <Colors channelName={"Colors"} setisCookieAvailable={setisCookieAvailable}/> : null}
+      {starplusclick ? <StarPlus channelName={"StarPlus"} setisCookieAvailable={setisCookieAvailable}/> : null}
+      {zeetvclick ? <ZeeTV channelName={"Zee-TV"} setisCookieAvailable={setisCookieAvailable}/> : null}
     </div>
     </>
   );
