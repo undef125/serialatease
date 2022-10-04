@@ -4,3 +4,5 @@ Used: <br />
     Frontend: NextJS <br />
     Backend: Nodejs <br />
     Scrapping: Puppeteer
+    
+ Website is live at: https://serialatease.netlify.app/
