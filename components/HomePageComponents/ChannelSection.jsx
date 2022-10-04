@@ -38,77 +38,77 @@ export default function ChannelSection({ channelName,setisCookieAvailable }) {
         <Stack style={{width: "100vw", display: 'flex', flexDirection: 'row', gap: '2rem', flexWrap: 'wrap'}}>
           <Skeleton
             height="5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem',}}
           />
           <Skeleton
             height="5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem',}}
           />
           <Skeleton
             height="5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem',}}
           />
           <Skeleton
             height="5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}
           />
           <Skeleton
             height="5.5rem"
-            width="11rem"
+            width="9.5rem"
             startColor="#212a3f "
             endColor="#26314a"
             style={{ borderRadius: "10px", padding: '.5rem'}}

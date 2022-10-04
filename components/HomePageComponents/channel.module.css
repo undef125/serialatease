@@ -70,12 +70,5 @@
     .individualnamecontainer{
         padding: .4rem;
         width: 9rem;
-        border-radius: 10px;
-        cursor: pointer;
-        color: silver;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5.5rem;
     }
 }
